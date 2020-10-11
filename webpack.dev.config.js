@@ -13,7 +13,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     contentBase: path.resolve(__dirname, './dist'),
-    index: 'index.html',
+    index: 'hello-world.html',
     port: 9000,
   },
   module: {
@@ -62,7 +62,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Hello World',
       description: 'Some Description',
-      template: 'src/index.hbs',
+      template: 'src/page-template.hbs',
     }),
   ],
 };

@@ -1,5 +1,10 @@
-function helloWorld() {
-    console.log('hello world.')
-}
+/* eslint-disable no-console */
+import _ from 'lodash';
+import Heading from './components/heading/heading';
+import HelloWorldButton from './components/hello-world-button/hello-world-button';
 
-export default helloWorld;
+const helloWorldButton = new HelloWorldButton();
+helloWorldButton.render();
+Heading.render(_.upperFirst('hello world'));
+
+console.log(process.env.NODE_ENV);
