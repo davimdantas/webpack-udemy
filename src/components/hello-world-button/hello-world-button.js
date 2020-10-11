@@ -1,21 +1,25 @@
-import './hello-world-button.scss'
+import './hello-world-button.scss';
+
 class HelloWorldButton {
-    buttonCssClass = 'hello-world-button';
+  constructor() {
+    this.buttonCssClass = 'hello-world-button';
+  }
 
-    render() {
-        const button = document.createElement('button');
-        button.innerHTML = 'Hello world';
-        button.classList.add('hello-world-button');
-        const body = document.querySelector('body')
-        button.onclick = function () {
-            const p = document.createElement('p')
-            p.innerHTML = 'Hello World';
-            p.classList.add(buttonCssClass)
-            body.appendChild(p)
-        }
+  render() {
+    const button = document.createElement('button');
 
-        body.appendChild(button);
-    }
+    button.innerHTML = 'Hello world';
+    button.classList.add('hello-world-button');
+    const body = document.querySelector('body');
+    button.onclick = () => {
+      const p = document.createElement('p');
+      p.innerHTML = 'Hello World';
+      p.classList.add(this.buttonCssClass);
+      body.appendChild(p);
+    };
+
+    body.appendChild(button);
+  }
 }
 
 export default HelloWorldButton;
