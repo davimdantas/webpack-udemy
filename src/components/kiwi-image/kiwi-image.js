@@ -1,3 +1,4 @@
+// @ts-ignore
 import Kiwi from './kiwi.jpg';
 import './kiwi-image.scss';
 
