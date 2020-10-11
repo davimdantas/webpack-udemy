@@ -51,9 +51,15 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [
         // '**/*', path.join(process.cwd(), 'build/**/*')
-        '**/*', path.resolve(__dirname, './build/**/*')
-      ]
+        '**/*',
+        path.resolve(__dirname, './build/**/*'),
+      ],
     }),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      title: 'Hello World',
+      meta: {
+        description: 'Some Description',
+      },
+    }),
   ],
 };
